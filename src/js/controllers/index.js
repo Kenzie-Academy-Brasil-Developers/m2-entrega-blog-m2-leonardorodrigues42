@@ -8,11 +8,12 @@ class dashboard {
             
             let posts = await Api.vizualizarPosts()
             .then(response => {
-                if (response !== undefined) {
+                console.log(response)
+                if (response.data) {
                     console.log("Validado")
                     return response
                 }else {
-                    window.location.href = "/Entregas/m2-entrega-blog-m2-leonardorodrigues42/src/pages/login.html"                      
+                    window.location.href = "/src/pages/login.html"                      
                 }
                 
             })
@@ -37,7 +38,8 @@ class dashboard {
                 const conteudo = document.createElement("div")
                 conteudo.id = "conteudo"
                 
-                const data = moment(post.createdAt).format("L")
+                // const data = moment().format("L")
+                const dataFormat = moment(post.createdAt).format("MMM Do YY")
 
                 cabecalho.insertAdjacentHTML('afterbegin',
                 `<img class="imgUsuario" src="${post.user.avatarUrl}"
@@ -57,7 +59,7 @@ class dashboard {
                 div.className = "controle"
 
 
-                div.innerText = ("beforeend", `${data}`)
+                div.innerText = ("beforeend", `${dataFormat}`)
 
                 principal.append(cabecalho, conteudo)
 
@@ -92,7 +94,7 @@ class dashboard {
 
         } else {
             console.log("Acesso negado")
-            window.location.href = "/Entregas/m2-entrega-blog-m2-leonardorodrigues42/src/pages/login.html"
+            window.location.href = "/src/pages/login.html"
         }
     }
 

@@ -1,5 +1,3 @@
-// import moment from 'moment'
-
 import dashboard from "./js/controllers/index.js"
 
 dashboard.mostrarPosts()

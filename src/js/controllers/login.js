@@ -8,7 +8,7 @@ class Login {
         const btnRegister = document.querySelector("#btnRegister")
 
         btnRegister.addEventListener("click", async () => {
-            window.location.href = "/Entregas/m2-entrega-blog-m2-leonardorodrigues42/src/pages/cadastro.html"
+            window.location.href = "/src/pages/cadastro.html"
         })
 
         btn.addEventListener("click", async (e) => {

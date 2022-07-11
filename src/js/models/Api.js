@@ -13,7 +13,7 @@ class Api {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(() => window.location.href = "/Entregas/m2-entrega-blog-m2-leonardorodrigues42/src/pages/login.html")
+        .then(() => window.location.href = "/src/pages/login.html")
         .catch(error => console.log(error))
     }
 
@@ -27,7 +27,7 @@ class Api {
         })
         .then(response => response.json())
         .then(response => localStorage.setItem("user", JSON.stringify(response)))
-        .then(() => window.location.href = "/Entregas/m2-entrega-blog-m2-leonardorodrigues42/index.html")
+        .then(() => window.location.href = "/index.html")
         .catch(error => console.log(error))
 
     }
