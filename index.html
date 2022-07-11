@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/index.style.css">
   <title>m2-entrega-blog-m2</title>
 </head>
 <body>
+
+  <header id="header">
+    <div>
+      <img id="imgPerfil" src="" alt="">
+      <h2 id="tituloPerfil"></h2>
+    </div>
+    <button id="logout">Logout</button>
+  </header>
+  <main>
+    <form id="formPost">
+      <textarea style="resize: vertical" type="text" id="criarPost" placeholder="Escreva seu post!!" required></textarea>
+      <input type="submit" value="Postar" id="criar">
+    </form>
+    
+    <section id="containerPosts">
   
+    </section>
+  </main> 
+
+  <script src="./node_modules/moment/moment.js"></script>
+  <script type="module" src="./src/script.js"></script>
 </body>
 </html>

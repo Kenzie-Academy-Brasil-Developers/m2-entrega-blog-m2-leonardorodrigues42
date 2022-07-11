@@ -1,0 +1,43 @@
+.bodyCadastro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(100, 149, 237, 1);
+}
+
+h1 {
+    position: relative;
+    top: -50px;
+    font-family: montserrat;
+    font-weight: 700;
+    font-size: 28px;
+    color: #ffff ;
+}
+
+#cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+#cadastro > input {
+    width: 246px;
+    height: 42px;
+    padding-left: 7px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+}
+
+#cadastro > input[type="submit"] {
+    width: 132px;
+    background: rgba(237, 188, 100, 1);
+    border: none;
+    border-radius: 3px;
+}
+
+#cadastro > input[type="submit"]:hover {
+    cursor: pointer;
+}
