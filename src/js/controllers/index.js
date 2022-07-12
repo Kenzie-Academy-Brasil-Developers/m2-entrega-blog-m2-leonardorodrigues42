@@ -37,9 +37,10 @@ class dashboard {
                 
                 const conteudo = document.createElement("div")
                 conteudo.id = "conteudo"
+
+                const data = new Date(post.createdAt)
                 
-                // const data = moment().format("L")
-                const dataFormat = moment(post.createdAt).format("MMM Do YY")
+                const dataFormat = new Intl.DateTimeFormat('pt-BR').format(data)
 
                 cabecalho.insertAdjacentHTML('afterbegin',
                 `<img class="imgUsuario" src="${post.user.avatarUrl}"
